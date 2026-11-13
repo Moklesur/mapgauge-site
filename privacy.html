@@ -92,21 +92,22 @@
   <main class="page">
     <span class="wm">Map<b>Gauge</b></span>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: November 11, 2026 · applies to the MapGauge Chrome extension, Free plan</p>
+    <p class="muted">Last updated: November 12, 2026 · applies to the MapGauge Chrome extension, Free and Pro plans</p>
 
     <div class="summary">
-      <p><strong>MapGauge Free sends nothing to any server.</strong> There are no accounts, no analytics and no tracking. Everything the extension does happens inside your own browser, and your audit reports stay on your own computer.</p>
+      <p><strong>MapGauge Free sends nothing to any server.</strong> There are no accounts, no analytics and no tracking. Everything the extension does happens inside your own browser, and your audit reports stay on your own computer. With Pro, the one exception is the licence check with Gumroad, described below.</p>
     </div>
 
     <section class="card" id="reads">
       <h2>What MapGauge reads</h2>
-      <p>MapGauge works only on Google Maps pages (<code>https://www.google.com/maps/…</code>). There it reads the data that Google Maps has <strong>already loaded for you</strong>:</p>
+      <p>MapGauge works only on Google Maps pages (<code>https://www.google.com/maps…</code>) and Google Search results pages (<code>https://www.google.com/search…</code>). There it reads the data that Google has <strong>already loaded for you</strong>:</p>
       <ul>
-        <li><strong>Search results:</strong> the businesses in the results list of a search you made, to show badges with their category, rating and review count.</li>
-        <li><strong>The business panel:</strong> the public details of a business you opened (name, categories, rating, review count, address, website, phone, opening hours, photo count, description, whether it is a hotel, and Google's IDs for it), to build the audit. Also its star breakdown (how many 1★ to 5★ reviews) and, for the few reviews Google loads with the business, only each review's date, star rating and whether the owner replied. MapGauge never uses or keeps reviewers' names, photos or review text.</li>
+        <li><strong>Search results:</strong> the businesses in the results list of a search you made, to show badges with their category, rating and review count, and to compare a business you audit with the top results of that search.</li>
+        <li><strong>Google Search:</strong> on a search you made, the businesses in the map box and on its "More places" page (name, primary category, rating, review count and Google's IDs for them), to show the same badges. Nothing from Google Search is saved.</li>
+        <li><strong>The business panel:</strong> the public details of a business you opened (name, categories, rating, review count, address, website, phone, opening hours, photo count, description, attributes such as accessibility or payment options, whether it is a hotel, whether Google shows it as unclaimed, and Google's IDs for it), to build the audit. Also its star breakdown (how many 1★ to 5★ reviews) and, for the few reviews Google loads with the business, only each review's date, star rating and whether the owner replied. MapGauge never uses or keeps reviewers' names, photos or review text. For the owner's newest posts Google loads with the business (up to 10), only each post's date, type (update or event) and button label, never its text, photos or links.</li>
       </ul>
       <p>MapGauge <strong>sends no extra requests to Google</strong>. It makes no searches you didn't start, doesn't scroll or click for you, and never changes what Google shows. It doesn't read your Google account, your email, your location history or any other website.</p>
-      <p>While a Maps tab is open, this data is kept only in that tab's memory. It is gone when you close or reload the tab, unless you save an audit report.</p>
+      <p>While a Maps or Search tab is open, this data is kept only in that tab's memory. It is gone when you close or reload the tab, unless you save an audit report.</p>
     </section>
 
     <section class="card" id="stores">
@@ -114,6 +115,9 @@
       <p>When you click <strong>Audit</strong> on a business, MapGauge saves an audit report. The toolbar popup shows your most recent reports from the same list.</p>
       <ul>
         <li><strong>What a report holds:</strong> the business's public details listed above, the time you saved it, and the address of the Google Maps page you were on (so you can reopen it). That address can include your search words and the map area you were looking at.</li>
+        <li><strong>For the Compare tab:</strong> if you opened the business from a search, the report also keeps your search words, the business's position in that search, and for the first 10 other businesses in the results their public name, categories, rating, review count, photo count, opening hours, website, phone, whether it is a hotel, whether Google shows it as unclaimed and its Google ID.</li>
+        <li><strong>Compares used today:</strong> the date and how many compares you used on it (Free includes 3 a day). This count stays on your computer.</li>
+        <li><strong>Pro licence (only if you activate Pro):</strong> your licence key, whether Gumroad said it is active (or why not, for example "refunded"), and when it was last checked. Removing the key on MapGauge's Pro licence page deletes it.</li>
         <li><strong>Where:</strong> in <code>chrome.storage.local</code>, the extension's own storage on your computer. It isn't synced to your Google account or sent anywhere.</li>
         <li><strong>How many:</strong> at most 50 reports. Auditing the same business again replaces its old report, and the oldest report is removed when a new one would go past 50.</li>
       </ul>
@@ -126,8 +130,10 @@
         <table>
           <thead><tr><th scope="col">Permission</th><th scope="col">Why MapGauge needs it</th></tr></thead>
           <tbody>
-            <tr><td><code>storage</code></td><td>To save your audit reports on your own computer.</td></tr>
-            <tr><td>Content script on <code>https://www.google.com/maps/*</code></td><td>To read the Maps data described above and show badges and the Audit button. It runs on Google Maps only, on no other site.</td></tr>
+            <tr><td><code>storage</code></td><td>To save your audit reports, and how many compares you used today, on your own computer.</td></tr>
+            <tr><td>Content script on <code>https://www.google.com/maps</code>, <code>https://www.google.com/maps/*</code> and <code>https://www.google.com/maps?*</code></td><td>To read the Maps data described above and show badges and the Audit button.</td></tr>
+            <tr><td>Content script on <code>https://www.google.com/search*</code></td><td>To read the businesses of the map box on Google Search results, described above, and show badges on them. It runs on Google Maps and Google Search results only, on no other site.</td></tr>
+            <tr><td><code>https://api.gumroad.com/*</code>, <strong>optional</strong></td><td>Only for Pro: to check your licence key with Gumroad. Chrome asks for it when you click <strong>Activate</strong>, never before, and MapGauge gives it back when you remove your key. Free users never grant it.</td></tr>
           </tbody>
         </table>
       </div>
@@ -141,10 +147,11 @@
           <thead><tr><th scope="col">Plan</th><th scope="col">Requests</th></tr></thead>
           <tbody>
             <tr><td>Free</td><td><strong>None.</strong> All code, icons and data ship inside the extension. Nothing is downloaded or uploaded.</td></tr>
+            <tr><td>Pro</td><td><strong>One kind:</strong> <code>POST https://api.gumroad.com/v2/licenses/verify</code>, which sends Gumroad your licence key and MapGauge's Pro product ID, nothing else (no reports, no businesses, no browsing data). It is sent when you click <strong>Activate</strong> or <strong>Check now</strong>, and at most once a day while you use MapGauge (when Chrome starts or when you click Audit), so a cancelled or refunded licence stops unlocking Pro. Gumroad answers whether the licence is active; its privacy policy applies to the request.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="muted">Two things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps" and "Open on Google Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), and Chrome itself checks the Chrome Web Store for extension updates.</p>
+      <p class="muted">Three things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps", "Open on Google Maps" and "Audit on Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), the "Join early access" and "Get Pro" buttons on locked Pro cards open Gumroad's page in a new tab only when you click them (Gumroad's privacy policy applies there; MapGauge sends Gumroad nothing), and Chrome itself checks the Chrome Web Store for extension updates.</p>
     </section>
 
     <section class="card" id="sharing">
@@ -153,8 +160,9 @@
     </section>
 
     <section class="card" id="pro">
-      <h2>The Pro plan, later</h2>
-      <p>A paid Pro plan may add server features later, such as accounts and extra data. <strong>This page will be updated before any of that ships</strong>, and it will list every new request and what it sends. The Free plan will keep working without a server.</p>
+      <h2>The Pro plan</h2>
+      <p>Payments go through <strong>Gumroad</strong> only, and MapGauge never sees your card details. Pro buttons in the extension open Gumroad's page in a new tab only when you click them; anything you enter there, such as your email, goes to Gumroad under Gumroad's privacy policy.</p>
+      <p>To unlock Pro you paste the licence key from your Gumroad email on MapGauge's Pro licence page and click <strong>Activate</strong>. Only then does Chrome ask your permission for MapGauge to contact <code>api.gumroad.com</code>, and the only request is the licence check listed above. Pro unlocks features that use the same Google data described above (all categories, all loaded search results, category gap names, unlimited compares); it reads nothing more from Google. The Free plan sends nothing to any server and keeps working without an account.</p>
     </section>
 
     <section class="card" id="contact">
