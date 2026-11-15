@@ -1,0 +1,50 @@
+/* MapGauge design tokens: shared by the extension (badges, popup, report page) and later the website.
+   Plain CSS variables, no build step. Light by default, dark via system setting or data-theme.
+   :host makes the light values work inside the Shadow DOM of badges injected into Google Maps
+   (always light there, to match the Maps results list). */
+:root, :host {
+  /* Brand */
+  --mg-brand: #0F766E;
+  --mg-brand-strong: #0B5A54;
+  --mg-brand-soft: #E6F2F0;
+  --mg-on-brand: #FFFFFF;
+  --mg-brand-on-ink: #5FD0C2; /* brand text on an --mg-ink background (the Maps tip) */
+
+  /* Surfaces and text */
+  --mg-bg: #F6F7F6;
+  --mg-card: #FFFFFF;
+  --mg-ink: #1F2937;
+  --mg-muted: #6B7280;
+  --mg-line: #E5E7EB;
+  --mg-hover: #F3F4F6;
+
+  /* Score / status */
+  --mg-good: #15803D;  --mg-good-soft: #E7F6EC;
+  --mg-ok:   #B45309;  --mg-ok-soft:   #FDF3E3;
+  --mg-bad:  #B91C1C;  --mg-bad-soft:  #FBEAEA;
+  --mg-star: #D97706;
+
+  /* Type: system fonts only (no remote fonts inside the extension) */
+  --mg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mg-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --mg-text-xs: 11px; --mg-text-sm: 12px; --mg-text-md: 14px; --mg-text-lg: 16px; --mg-text-xl: 20px; --mg-text-2xl: 28px;
+
+  /* Space, radius, shadow */
+  --mg-s1: 4px; --mg-s2: 8px; --mg-s3: 12px; --mg-s4: 16px; --mg-s5: 24px; --mg-s6: 32px;
+  --mg-r-sm: 6px; --mg-r-md: 10px; --mg-r-lg: 14px; --mg-r-pill: 999px;
+  --mg-shadow: 0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37; --mg-on-brand: #04201D;
+    --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236; --mg-hover: #24282C;
+    --mg-good: #4ADE80; --mg-good-soft: #143322; --mg-ok: #FBBF24; --mg-ok-soft: #3A2C10; --mg-bad: #F87171; --mg-bad-soft: #3B1717; --mg-star: #FBBF24;
+    --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37; --mg-on-brand: #04201D;
+  --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236; --mg-hover: #24282C;
+  --mg-good: #4ADE80; --mg-good-soft: #143322; --mg-ok: #FBBF24; --mg-ok-soft: #3A2C10; --mg-bad: #F87171; --mg-bad-soft: #3B1717; --mg-star: #FBBF24;
+  --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
+}

@@ -1,10 +1,10 @@
 <!doctype html>
 <!--
-  MapGauge privacy policy. One self-contained file: no scripts, no external fonts, images or trackers,
-  so it can be moved to any static host (GitHub Pages now, mapgauge.com later) as is.
-  Colours and sizes are copied from shared/tokens.css; keep them in sync if the tokens change.
-  Every claim here must match the extension's code. Update the page (and "Last updated")
-  BEFORE shipping any change that adds a permission, stored data or a network request.
+  MapGauge privacy policy, as served on the website. Every claim here must match the extension that is
+  LIVE in the Chrome Web Store (now 1.0.0). docs/privacy.html holds the text for the next release (1.1.0):
+  when that release is published, put its sections here in place of these (see HANDOFF.md).
+  Update the page (and "Last updated") BEFORE shipping any change that adds a permission, stored data or
+  a network request.
 -->
 <html lang="en">
 <head>
@@ -14,83 +14,25 @@
   <meta name="referrer" content="no-referrer">
   <title>MapGauge Privacy Policy</title>
   <meta name="description" content="MapGauge Free sends nothing to any server: no accounts, no analytics, no tracking.">
-  <style>
-    :root {
-      --mg-brand: #0F766E;
-      --mg-brand-strong: #0B5A54;
-      --mg-brand-soft: #E6F2F0;
-      --mg-bg: #F6F7F6;
-      --mg-card: #FFFFFF;
-      --mg-ink: #1F2937;
-      --mg-muted: #6B7280;
-      --mg-line: #E5E7EB;
-      --mg-good: #15803D; --mg-good-soft: #E7F6EC;
-      --mg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --mg-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      --mg-text-md: 14px; --mg-text-lg: 16px; --mg-text-xl: 20px; --mg-text-2xl: 28px;
-      --mg-s1: 4px; --mg-s2: 8px; --mg-s3: 12px; --mg-s4: 16px; --mg-s5: 24px; --mg-s6: 32px;
-      --mg-r-sm: 6px; --mg-r-md: 10px; --mg-r-lg: 14px;
-      --mg-shadow: 0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.08);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37;
-        --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236;
-        --mg-good: #4ADE80; --mg-good-soft: #143322;
-        --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
-      }
-    }
-
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--mg-bg);
-      color: var(--mg-ink);
-      font: var(--mg-text-lg)/1.6 var(--mg-font);
-    }
-    .page { max-width: 720px; margin: 0 auto; padding: var(--mg-s5) var(--mg-s4) var(--mg-s6); }
-    .wm { font-weight: 600; font-size: var(--mg-text-xl); color: var(--mg-ink); }
-    .wm b { color: var(--mg-brand); }
-    h1 { font-size: var(--mg-text-2xl); line-height: 1.25; margin: var(--mg-s4) 0 var(--mg-s1); }
-    h2 { font-size: var(--mg-text-xl); line-height: 1.3; margin: 0 0 var(--mg-s3); }
-    p, ul, ol { margin: 0 0 var(--mg-s3); }
-    li + li { margin-top: var(--mg-s1); }
-    a { color: var(--mg-brand); text-underline-offset: 2px; }
-    a:hover { color: var(--mg-brand-strong); }
-    code { font: 0.9em var(--mg-mono); background: var(--mg-brand-soft); padding: 1px var(--mg-s1); border-radius: var(--mg-r-sm); overflow-wrap: anywhere; }
-    .muted { color: var(--mg-muted); font-size: var(--mg-text-md); }
-
-    .summary {
-      background: var(--mg-good-soft);
-      border-left: 4px solid var(--mg-good);
-      border-radius: var(--mg-r-md);
-      padding: var(--mg-s4);
-      margin: var(--mg-s5) 0;
-    }
-    .summary p:last-child { margin-bottom: 0; }
-    .card {
-      background: var(--mg-card);
-      border: 1px solid var(--mg-line);
-      border-radius: var(--mg-r-lg);
-      box-shadow: var(--mg-shadow);
-      padding: var(--mg-s5) var(--mg-s4);
-      margin-bottom: var(--mg-s4);
-    }
-    .card > :last-child { margin-bottom: 0; }
-
-    .table-wrap { overflow-x: auto; margin-bottom: var(--mg-s3); }
-    table { width: 100%; border-collapse: collapse; font-size: var(--mg-text-md); }
-    th, td { text-align: left; vertical-align: top; padding: var(--mg-s2) var(--mg-s3); border-bottom: 1px solid var(--mg-line); }
-    th { color: var(--mg-muted); font-weight: 600; }
-    tr:last-child td { border-bottom: 0; }
-
-    footer { margin-top: var(--mg-s5); }
-  </style>
+  <link rel="icon" href="assets/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icon-128.png">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <main class="page">
-    <span class="wm">Map<b>Gauge</b></span>
+  <a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wm" href="./"><img src="assets/mapgauge-pin.svg" width="30" height="30" alt=""><span>Map<b>Gauge</b></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a class="btn primary small" href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main" class="policy">
     <h1>Privacy Policy</h1>
     <p class="muted">Last updated: November 13, 2026 · applies to the MapGauge Chrome extension, Free and Pro plans</p>
 
@@ -173,9 +115,19 @@
       <p>Questions about privacy? Email <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>.</p>
     </section>
 
-    <footer class="muted">
-      <p>© 2026 MapGauge. MapGauge is not affiliated with Google.</p>
-    </footer>
   </main>
+
+  <footer class="site-foot">
+  <div class="wrap">
+    <span>MapGauge is not affiliated with, endorsed by or sponsored by Google. Google Maps is a trademark of Google LLC.</span>
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Chrome Web Store</a>
+      <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>

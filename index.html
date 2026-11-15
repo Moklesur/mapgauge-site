@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <title>MapGauge: Google Business Profile audit on Google Maps</title>
+  <meta name="description" content="A free Chrome extension that scores any Google Business Profile from 0 to 100 on Google Maps and tells you what to fix first. No account, no tracking.">
+  <link rel="icon" href="assets/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icon-128.png">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wm" href="./"><img src="assets/mapgauge-pin.svg" width="30" height="30" alt=""><span>Map<b>Gauge</b></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="btn primary small" href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="pill">Free Chrome extension</span>
+          <h1>Audit any Google Business Profile in three clicks</h1>
+          <p class="lead">MapGauge scores a business’s profile on Google Maps from 0 to 100 and gives you a to-do list, most important fixes first. No account, nothing to set up.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Add to Chrome, it’s free</a>
+            <a class="btn" href="pricing.html">See Pro</a>
+          </div>
+          <p class="note">For local SEO specialists, agencies and freelancers, and owners checking their own listing.</p>
+        </div>
+
+        <figure class="card example" aria-label="Example report">
+          <div class="example-head">
+            <span class="ring-wrap" aria-hidden="true">
+              <svg class="ring" viewBox="0 0 120 120">
+                <circle class="track" cx="60" cy="60" r="50"/>
+                <circle class="value" cx="60" cy="60" r="50" pathLength="100" stroke-dasharray="84 100"/>
+              </svg>
+              <span class="ring-label"><b>84</b><small>of 100</small></span>
+            </span>
+            <div>
+              <b>Example Dental Clinic</b>
+              <span class="muted">Dentist · Dallas, TX</span>
+              <span class="good">Good profile, 2 things to fix</span>
+            </div>
+          </div>
+          <ul class="todo">
+            <li><span>Reply to 6 unanswered reviews</span><b>High</b></li>
+            <li><span>Post an update (last one 41 days ago)</span><b>Medium</b></li>
+          </ul>
+          <figcaption>Example report, made-up business</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="alt" aria-labelledby="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how">How it works</h2>
+          <p>MapGauge works inside Google Maps, on the pages you already use.</p>
+        </div>
+        <ol class="grid">
+          <li class="card">
+            <h3><span class="num">1</span>Search on Google Maps</h3>
+            <p>Search for any type of business, like “plumber london”. The first 20 results get a badge with their primary category, rating and review count.</p>
+          </li>
+          <li class="card">
+            <h3><span class="num">2</span>Open a business</h3>
+            <p>Click a business. MapGauge’s box appears at the bottom-right of its panel, with the Audit button.</p>
+          </li>
+          <li class="card">
+            <h3><span class="num">3</span>Click Audit</h3>
+            <p>A report opens in a new tab: the score, the to-do list, categories, attributes, reviews, posts, and a comparison with the top 10 results of your search.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="checks">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="checks">What the audit checks</h2>
+          <p>11 checks, each with where to fix it in the Business Profile (for example: Edit profile → Hours).</p>
+        </div>
+        <ul class="checks">
+          <li><b>Claimed</b><span>Does an owner manage the profile?</span></li>
+          <li><b>Reviews</b><span>At least 10 reviews?</span></li>
+          <li><b>Rating</b><span>4.0 or higher?</span></li>
+          <li><b>Owner replies</b><span>Are at least half of the reviews Google shows answered?</span></li>
+          <li><b>Posts</b><span>Has the owner posted in the last 30 days?</span></li>
+          <li><b>Opening hours</b><span>Are they listed?</span></li>
+          <li><b>Website</b><span>Is one listed?</span></li>
+          <li><b>Phone</b><span>Is a number listed?</span></li>
+          <li><b>Photos</b><span>At least 10?</span></li>
+          <li><b>Description</b><span>Has the owner written one?</span></li>
+          <li><b>Categories</b><span>Are there secondary categories for the business’s other services?</span></li>
+        </ul>
+        <p class="note">Hotels can’t set opening hours or write their own description, so those checks are skipped for them. If Google’s data can’t be read in full, MapGauge says “Data may be incomplete” instead of showing a wrong number.</p>
+      </div>
+    </section>
+
+    <section class="alt" aria-labelledby="more">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="more">More than a score</h2>
+          <p>Everything below is free.</p>
+        </div>
+        <ul class="grid">
+          <li class="card">
+            <h3>Categories</h3>
+            <p>See a business’s primary and secondary categories on every result, and search all 4,081 Business Profile categories in the report.</p>
+          </li>
+          <li class="card">
+            <h3>Compare with competitors</h3>
+            <p>The business next to the top 10 results of the search you opened it from, and where it falls behind. 3 compares a day.</p>
+          </li>
+          <li class="card">
+            <h3>Badges on Google Search</h3>
+            <p>The map box on a Google search gets the same badges, and an “Audit on Maps” button in the business panel.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="privacy-band" aria-labelledby="private">
+      <div class="wrap">
+        <svg class="shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+        <div>
+          <h2 id="private">Private by design</h2>
+          <ul>
+            <li>MapGauge Free sends nothing to any server. No account, no analytics, no tracking.</li>
+            <li>It reads only what Google Maps or Google Search has already loaded for you. It makes no searches you didn’t start, and doesn’t scroll or click for you.</li>
+            <li>Reports are saved only in your browser and are deleted when you remove the extension.</li>
+          </ul>
+          <a href="privacy.html">Read the privacy policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt cta" aria-labelledby="start">
+      <div class="wrap">
+        <h2 id="start">Try it on your next Maps search</h2>
+        <p class="muted">Free forever. Pro adds lead filters, the review and post audits and branded PDF reports.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Add to Chrome</a>
+          <a class="btn" href="pricing.html">Compare Free and Pro</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+  <div class="wrap">
+    <span>MapGauge is not affiliated with, endorsed by or sponsored by Google. Google Maps is a trademark of Google LLC.</span>
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Chrome Web Store</a>
+      <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
