@@ -1,10 +1,10 @@
 <!doctype html>
 <!--
-  MapGauge privacy policy, as served on the website. Every claim here must match the extension that is
-  LIVE in the Chrome Web Store (now 1.0.0). docs/privacy.html holds the text for the next release (1.1.0):
-  when that release is published, put its sections here in place of these (see HANDOFF.md).
-  Update the page (and "Last updated") BEFORE shipping any change that adds a permission, stored data or
-  a network request.
+  MapGauge privacy policy for the NEXT release (1.1.0). The website serves web/privacy.html, which must
+  match the release that is live in the Chrome Web Store: when 1.1.0 is published, move these sections
+  there (see web/README.md). Colours and sizes are copied from shared/tokens.css.
+  Every claim here must match the extension's code. Update the page (and "Last updated")
+  BEFORE shipping any change that adds a permission, stored data or a network request.
 -->
 <html lang="en">
 <head>
@@ -14,27 +14,85 @@
   <meta name="referrer" content="no-referrer">
   <title>MapGauge Privacy Policy</title>
   <meta name="description" content="MapGauge Free sends nothing to any server: no accounts, no analytics, no tracking.">
-  <link rel="icon" href="assets/icon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="assets/icon-128.png">
-  <link rel="stylesheet" href="assets/tokens.css">
-  <link rel="stylesheet" href="site.css">
+  <style>
+    :root {
+      --mg-brand: #0F766E;
+      --mg-brand-strong: #0B5A54;
+      --mg-brand-soft: #E6F2F0;
+      --mg-bg: #F6F7F6;
+      --mg-card: #FFFFFF;
+      --mg-ink: #1F2937;
+      --mg-muted: #6B7280;
+      --mg-line: #E5E7EB;
+      --mg-good: #15803D; --mg-good-soft: #E7F6EC;
+      --mg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mg-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --mg-text-md: 14px; --mg-text-lg: 16px; --mg-text-xl: 20px; --mg-text-2xl: 28px;
+      --mg-s1: 4px; --mg-s2: 8px; --mg-s3: 12px; --mg-s4: 16px; --mg-s5: 24px; --mg-s6: 32px;
+      --mg-r-sm: 6px; --mg-r-md: 10px; --mg-r-lg: 14px;
+      --mg-shadow: 0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37;
+        --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236;
+        --mg-good: #4ADE80; --mg-good-soft: #143322;
+        --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--mg-bg);
+      color: var(--mg-ink);
+      font: var(--mg-text-lg)/1.6 var(--mg-font);
+    }
+    .page { max-width: 720px; margin: 0 auto; padding: var(--mg-s5) var(--mg-s4) var(--mg-s6); }
+    .wm { font-weight: 600; font-size: var(--mg-text-xl); color: var(--mg-ink); }
+    .wm b { color: var(--mg-brand); }
+    h1 { font-size: var(--mg-text-2xl); line-height: 1.25; margin: var(--mg-s4) 0 var(--mg-s1); }
+    h2 { font-size: var(--mg-text-xl); line-height: 1.3; margin: 0 0 var(--mg-s3); }
+    p, ul, ol { margin: 0 0 var(--mg-s3); }
+    li + li { margin-top: var(--mg-s1); }
+    a { color: var(--mg-brand); text-underline-offset: 2px; }
+    a:hover { color: var(--mg-brand-strong); }
+    code { font: 0.9em var(--mg-mono); background: var(--mg-brand-soft); padding: 1px var(--mg-s1); border-radius: var(--mg-r-sm); overflow-wrap: anywhere; }
+    .muted { color: var(--mg-muted); font-size: var(--mg-text-md); }
+
+    .summary {
+      background: var(--mg-good-soft);
+      border-left: 4px solid var(--mg-good);
+      border-radius: var(--mg-r-md);
+      padding: var(--mg-s4);
+      margin: var(--mg-s5) 0;
+    }
+    .summary p:last-child { margin-bottom: 0; }
+    .card {
+      background: var(--mg-card);
+      border: 1px solid var(--mg-line);
+      border-radius: var(--mg-r-lg);
+      box-shadow: var(--mg-shadow);
+      padding: var(--mg-s5) var(--mg-s4);
+      margin-bottom: var(--mg-s4);
+    }
+    .card > :last-child { margin-bottom: 0; }
+
+    .table-wrap { overflow-x: auto; margin-bottom: var(--mg-s3); }
+    table { width: 100%; border-collapse: collapse; font-size: var(--mg-text-md); }
+    th, td { text-align: left; vertical-align: top; padding: var(--mg-s2) var(--mg-s3); border-bottom: 1px solid var(--mg-line); }
+    th { color: var(--mg-muted); font-weight: 600; }
+    tr:last-child td { border-bottom: 0; }
+
+    footer { margin-top: var(--mg-s5); }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <a class="wm" href="./"><img src="assets/mapgauge-pin.svg" width="30" height="30" alt=""><span>Map<b>Gauge</b></span></a>
-    <nav class="nav" aria-label="Main">
-      <a href="pricing.html">Pricing</a>
-      <a href="privacy.html" aria-current="page">Privacy</a>
-      <a class="btn primary small" href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Add to Chrome</a>
-    </nav>
-  </div>
-</header>
-
-  <main id="main" class="policy">
+  <main class="page">
+    <span class="wm">Map<b>Gauge</b></span>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: November 13, 2026 · applies to the MapGauge Chrome extension, Free and Pro plans</p>
+    <p class="muted">Last updated: November 15, 2026 · applies to the MapGauge Chrome extension, Free and Pro plans</p>
 
     <div class="summary">
       <p><strong>MapGauge Free sends nothing to any server.</strong> There are no accounts, no analytics and no tracking. Everything the extension does happens inside your own browser, and your audit reports stay on your own computer. With Pro, the one exception is the licence check with Gumroad, described below.</p>
@@ -46,11 +104,11 @@
       <ul>
         <li><strong>Search results:</strong> the businesses in the results list of a search you made, to show badges with their category, rating and review count, to compare a business you audit with the top results of that search and, with Pro, to filter them by website, phone, claimed status and review count (the lead filters). Filter choices are kept only while the Maps tab is open.</li>
         <li><strong>Google Search:</strong> on a search you made, the businesses in the map box and on its "More places" page (name, primary category, rating, review count and Google's IDs for them), to show the same badges. Nothing from Google Search is saved.</li>
-        <li><strong>The business panel:</strong> the public details of a business you opened (name, categories, rating, review count, address, website, phone, opening hours, photo count, description, attributes such as accessibility or payment options, whether it is a hotel, whether Google shows it as unclaimed, and Google's IDs for it), to build the audit. Also its star breakdown (how many 1★ to 5★ reviews) and, for the few reviews Google loads with the business, only each review's date, star rating and whether the owner replied. MapGauge never uses or keeps reviewers' names, photos or review text. For the owner's newest posts Google loads with the business (up to 10), only each post's date, type (update or event) and button label, never its text, photos or links.</li>
+        <li><strong>The business panel:</strong> the public details of a business you opened (name, categories, rating, review count, address (also split into street, city, postal code, region and country), map position, website, phone (also in international format), opening hours, photo count, description, attributes such as accessibility or payment options, whether it is a hotel, whether Google shows it as unclaimed, and Google's IDs for it), to build the audit. Also its star breakdown (how many 1★ to 5★ reviews) and, for the few reviews Google loads with the business, only each review's date, star rating and whether the owner replied. MapGauge never uses or keeps reviewers' names, photos or review text. For the owner's newest posts Google loads with the business (up to 10), only each post's date, type (update or event) and button label, never its text, photos or links.</li>
         <li><strong>The Reviews tab:</strong> if you open a business's Reviews tab and scroll it yourself, the reviews Google loads for you there: only each review's date, last edit date and star rating, whether the owner replied and when. MapGauge never uses or keeps reviewers' names, photos or review text, or Google's ID for the review. It shows how many it has under the Audit button. It also notes whether you picked a topic or typed a word in that tab's search box, only to tell that the list is filtered; the topic and the word are never kept.</li>
       </ul>
       <p>MapGauge <strong>sends no extra requests to Google</strong>. It makes no searches you didn't start, doesn't scroll or click for you, and never changes what Google shows. It doesn't read your Google account, your email, your location history or any other website.</p>
-      <p>While a Maps or Search tab is open, this data is kept only in that tab's memory. It is gone when you close or reload the tab, unless you save an audit report.</p>
+      <p>While a Maps or Search tab is open, this data is kept only in that tab's memory. It is gone when you close or reload the tab, unless you save an audit report. The one exception is the self-check's list of which details could be read, described below.</p>
     </section>
 
     <section class="card" id="stores">
@@ -63,7 +121,9 @@
         <li><strong>Compares used today:</strong> the date and how many compares you used on it (Free includes 3 a day). This count stays on your computer.</li>
         <li><strong>Pro licence (only if you activate Pro):</strong> your licence key, whether Gumroad said it is active (or why not, for example "refunded"), and when it was last checked. Removing the key on MapGauge's Pro licence page deletes it.</li>
         <li><strong>PDF branding (Pro, only if you set it):</strong> the logo picture, company name and contact line you enter on MapGauge's Pro page, to print them at the top of your PDF reports. They are never sent anywhere; <strong>Clear all</strong> on that page deletes them.</li>
-        <li><strong>Where:</strong> in <code>chrome.storage.local</code>, the extension's own storage on your computer. It isn't synced to your Google account or sent anywhere.</li>
+        <li><strong>First-time tip:</strong> whether you closed the "Score this profile" tip on Google Maps, so it isn't shown again.</li>
+        <li><strong>Self-check:</strong> for the last 100 search results and the last 100 businesses you opened on Google Maps, only which details MapGauge could read (for example "website: read, phone: read"), and the time the last one was seen. Never a business's name, its ID or your search, so it can't tell which businesses you saw. MapGauge's self-check page uses it to show whether MapGauge still reads Google Maps correctly. It is kept in <code>chrome.storage.session</code>, in memory only, and deleted when Chrome closes or when you click <strong>Clear and start again</strong> on that page.</li>
+        <li><strong>Where:</strong> in <code>chrome.storage.local</code>, the extension's own storage on your computer (the self-check in <code>chrome.storage.session</code>, as above). It isn't synced to your Google account or sent anywhere.</li>
         <li><strong>How many:</strong> at most 50 reports. Auditing the same business again replaces its old report, and the oldest report is removed when a new one would go past 50.</li>
       </ul>
       <p><strong>How to delete them:</strong> remove the extension. Open <code>chrome://extensions</code>, find MapGauge and click <strong>Remove</strong> (or right-click the MapGauge icon in the toolbar and choose <strong>Remove from Chrome</strong>). Chrome then deletes all of MapGauge's saved data. If you install it again, it starts empty.</p>
@@ -96,7 +156,7 @@
           </tbody>
         </table>
       </div>
-      <p class="muted">Three things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps", "Open on Google Maps" and "Audit on Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), the "Join early access" and "Get Pro" buttons on locked Pro cards open Gumroad's page in a new tab only when you click them (Gumroad's privacy policy applies there; MapGauge sends Gumroad nothing), and Chrome itself checks the Chrome Web Store for extension updates.</p>
+      <p class="muted">Four things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps", "Open on Google Maps" and "Audit on Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), the "Join early access" and "Get Pro" buttons on locked Pro cards open Gumroad's page in a new tab only when you click them (Gumroad's privacy policy applies there; MapGauge sends Gumroad nothing), the "Report a problem" button on the self-check page opens your own email app with a message to MapGauge filled in (MapGauge's version and which details weren't read, no business names, searches or links), which is sent only if you send it yourself, and Chrome itself checks the Chrome Web Store for extension updates.</p>
     </section>
 
     <section class="card" id="sharing">
@@ -115,19 +175,9 @@
       <p>Questions about privacy? Email <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>.</p>
     </section>
 
+    <footer class="muted">
+      <p>© 2026 MapGauge. MapGauge is not affiliated with Google.</p>
+    </footer>
   </main>
-
-  <footer class="site-foot">
-  <div class="wrap">
-    <span>MapGauge is not affiliated with, endorsed by or sponsored by Google. Google Maps is a trademark of Google LLC.</span>
-    <nav aria-label="Footer">
-      <a href="./">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Chrome Web Store</a>
-      <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>
-    </nav>
-  </div>
-</footer>
 </body>
 </html>
