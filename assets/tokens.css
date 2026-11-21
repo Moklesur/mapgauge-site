@@ -19,10 +19,12 @@
   --mg-hover: #F3F4F6;
 
   /* Score / status */
-  --mg-good: #15803D;  --mg-good-soft: #E7F6EC;
+  --mg-good: #157D3C;  --mg-good-soft: #E7F6EC; /* good text on good-soft is 4.66:1 (12 px text needs 4.5:1) */
   --mg-ok:   #B45309;  --mg-ok-soft:   #FDF3E3;
   --mg-bad:  #B91C1C;  --mg-bad-soft:  #FBEAEA;
   --mg-star: #D97706;
+  /* A competitor's pin on the Grid scan map: apart from the brand and the rank colours */
+  --mg-pin: #7C3AED; --mg-on-pin: #FFFFFF;
 
   /* Type: system fonts only (no remote fonts inside the extension) */
   --mg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -32,6 +34,12 @@
   /* Space, radius, shadow */
   --mg-s1: 4px; --mg-s2: 8px; --mg-s3: 12px; --mg-s4: 16px; --mg-s5: 24px; --mg-s6: 32px;
   --mg-r-sm: 6px; --mg-r-md: 10px; --mg-r-lg: 14px; --mg-r-pill: 999px;
+  /* Mini score rings (the Audit profile pill and box): size, stroke (in the 36-unit viewBox) and the number
+     inside. Sized so a 3-digit score ("100") keeps clear space inside the ring. */
+  --mg-ring-sm: 36px; --mg-ring-md: 40px; --mg-ring-stroke: 3;
+  --mg-ring-text-sm: 10px; --mg-ring-text-md: var(--mg-text-xs);
+  /* The Audit profile bar on Google Maps: its width when there is no panel to follow (Google's panel is about 408 px). */
+  --mg-bar-width: 408px;
   --mg-shadow: 0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.08);
 }
 @media (prefers-color-scheme: dark) {
@@ -39,6 +47,7 @@
     --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37; --mg-on-brand: #04201D;
     --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236; --mg-hover: #24282C;
     --mg-good: #4ADE80; --mg-good-soft: #143322; --mg-ok: #FBBF24; --mg-ok-soft: #3A2C10; --mg-bad: #F87171; --mg-bad-soft: #3B1717; --mg-star: #FBBF24;
+    --mg-pin: #A78BFA; --mg-on-pin: #1E1035;
     --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
   }
 }
@@ -46,5 +55,6 @@
   --mg-brand: #2BB3A3; --mg-brand-strong: #5FD0C2; --mg-brand-soft: #123B37; --mg-on-brand: #04201D;
   --mg-bg: #121416; --mg-card: #1B1E21; --mg-ink: #E8EAED; --mg-muted: #9AA0A6; --mg-line: #2E3236; --mg-hover: #24282C;
   --mg-good: #4ADE80; --mg-good-soft: #143322; --mg-ok: #FBBF24; --mg-ok-soft: #3A2C10; --mg-bad: #F87171; --mg-bad-soft: #3B1717; --mg-star: #FBBF24;
+  --mg-pin: #A78BFA; --mg-on-pin: #1E1035;
   --mg-shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.35);
 }

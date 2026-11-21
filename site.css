@@ -117,6 +117,7 @@ section { padding: 56px 0; }
 .policy { max-width: 760px; margin: 0 auto; padding: var(--mg-s6) var(--mg-s4) 56px; }
 .policy h1 { font-size: var(--mg-text-2xl); margin: 0 0 var(--mg-s1); }
 .policy h2 { font-size: var(--mg-text-xl); margin: 0 0 var(--mg-s3); }
+.policy h3 { font-size: var(--mg-text-lg); margin: var(--mg-s4) 0 var(--mg-s2); }
 .policy li + li { margin-top: var(--mg-s1); }
 .policy .muted { font-size: var(--mg-text-md); }
 .policy .card { padding: var(--mg-s5) var(--mg-s4); margin-bottom: var(--mg-s4); }
