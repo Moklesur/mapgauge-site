@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
   MapGauge privacy policy, as served on the website. Every claim here must match the extension that is
-  LIVE in the Chrome Web Store. This file holds the 1.2.0 text (Grid scan), the same sections as
-  docs/privacy.html: deploy it (npm run site:deploy -- --push) at the 1.2.0 upload, not before (see HANDOFF.md).
+  LIVE in the Chrome Web Store. This file holds the 1.3.0 text (accounts, Grid scan, Restore Pro), the same sections as
+  docs/privacy.html: deploy it (npm run site:deploy -- --push) at the 1.3.0 upload, not before (see HANDOFF.md).
   Update the page (and "Last updated") BEFORE shipping any change that adds a permission, stored data or
   a network request.
 -->
@@ -13,7 +13,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="no-referrer">
   <title>MapGauge Privacy Policy</title>
-  <meta name="description" content="MapGauge Free sends nothing to any server: no accounts, no analytics, no tracking. Pro adds a licence check and Grid scan.">
+  <meta name="description" content="Without an account, MapGauge sends nothing to any server: no analytics, no tracking. An account (email sign-in) is needed only for Grid scan and Restore Pro.">
   <link rel="icon" href="assets/icon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icon-128.png">
   <link rel="stylesheet" href="assets/tokens.css">
@@ -34,10 +34,10 @@
 
   <main id="main" class="policy">
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: November 20, 2026 · applies to the MapGauge Chrome extension, Free and Pro plans</p>
+    <p class="muted">Last updated: November 23, 2026 · applies to the MapGauge Chrome extension 1.3.0, Free and Pro plans</p>
 
     <div class="summary">
-      <p><strong>MapGauge Free sends nothing to any server.</strong> There are no accounts, no analytics and no tracking. Everything the extension does happens inside your own browser, and your audit reports stay on your own computer. With Pro, the exceptions are the licence check with Gumroad and Grid scan, which runs on MapGauge&rsquo;s own server, both described below.</p>
+      <p><strong>Without an account, MapGauge sends nothing to any server.</strong> There are no analytics and no tracking. Your audits, saved reports and the Rank log stay in your browser only, with or without an account. An account (sign-in with an emailed code) is needed only for Grid scan and to unlock Pro with Restore Pro; MapGauge then keeps your email address and the data listed in <a href="#account">Your account and MapGauge's server</a>. A Pro licence key pasted on MapGauge's Pro page is checked with Gumroad, as described below.</p>
     </div>
 
     <section class="card" id="reads">
@@ -49,30 +49,33 @@
         <li><strong>The business panel:</strong> the public details of a business you opened (name, categories, rating, review count, address (also split into street, city, postal code, region and country), map position, website, phone (also in international format), opening hours, photo count, description, attributes such as accessibility or payment options, its booking, reservation and ordering links and its menu link, whether it is a hotel, whether Google shows it as unclaimed, and Google's IDs for it), to build the audit. Also its star breakdown (how many 1★ to 5★ reviews) and, for the few reviews Google loads with the business, only each review's date, star rating and whether the owner replied. MapGauge never uses or keeps reviewers' names, photos or review text. For the owner's newest posts Google loads with the business (up to 10), only each post's date, type (update or event) and button label, never its text, photos or links.</li>
         <li><strong>The Reviews tab:</strong> if you open a business's Reviews tab and scroll it yourself, the reviews Google loads for you there: only each review's date, last edit date and star rating, whether the owner replied and when. MapGauge never uses or keeps reviewers' names, photos or review text, or Google's ID for the review. It shows how many it has next to the Audit profile button. It also notes whether you picked a topic or typed a word in that tab's search box, only to tell that the list is filtered; the topic and the word are never kept.</li>
       </ul>
-      <p>MapGauge <strong>sends no extra requests to Google</strong>. It makes no searches you didn't start, doesn't scroll or click for you, and never changes what Google shows. It doesn't read your Google account, your email, your location history or any other website.</p>
+      <p>MapGauge <strong>sends no extra requests to Google</strong>. It makes no searches you didn't start, doesn't click for you, and never changes what Google shows. It doesn't scroll for you, with one exception you start yourself: with Pro, <strong>Load all</strong> above the Maps results scrolls Google's results list step by step so Google loads more results (at most 200, for at most 2 minutes), and stops when you click Stop, start a new search, leave the list or hide the tab. It doesn't read your Google account, your location history or any other website.</p>
       <p>While a Maps or Search tab is open, this data is kept only in that tab's memory. It is gone when you close or reload the tab, except what goes into an audit report you save, the Rank log and the self-check's list of which details could be read, all described below.</p>
     </section>
 
     <section class="card" id="stores">
-      <h2>What MapGauge stores</h2>
-      <p>When you click <strong>Audit profile</strong> on a business, MapGauge saves an audit report. The toolbar popup shows your most recent reports from the same list. MapGauge also keeps the Rank log described below.</p>
+      <h2>What MapGauge stores in your browser</h2>
+      <p>When you click <strong>Audit profile</strong> on a business, MapGauge saves an audit report. The toolbar popup shows your most recent reports from the same list. MapGauge also keeps the Rank log and the other items below. All of it stays on your device.</p>
       <ul>
         <li><strong>What a report holds:</strong> the business's public details listed above, the time you saved it, and the address of the Google Maps page you were on (so you can reopen it). That address can include your search words and the map area you were looking at.</li>
         <li><strong>For the Compare tab:</strong> if you opened the business from a search, the report also keeps your search words, the business's position in that search, and for the first 20 other businesses in the results their public name, categories, rating, review count, photo count, opening hours, website, phone, whether it is a hotel, whether Google shows it as unclaimed and its Google ID.</li>
         <li><strong>For the review audit:</strong> if you loaded reviews on the business's Reviews tab before clicking Audit, the report also keeps up to 1,000 of them, each with only the dates, star rating and whether the owner replied listed above.</li>
         <li><strong>Rank log:</strong> where a business appeared in your own Google Maps searches. It is kept for each business you open after a search, and on every search for up to 10 businesses you turn on with "Log this business in my searches" on their report's Rank tab (MapGauge keeps those businesses' Google IDs to know which ones). Each entry holds your search words, the business's position in the results Google had loaded for you (or "not found"), how many results were loaded, when it was first and last seen, and a random ID for that search, under the business's Google ID. MapGauge reads it only from results Google already loaded; it makes no search and sends nothing. At most 50 entries per business and 100 businesses (plus those you turn on); nothing is deleted to make room: when a business's log or the whole log is full, new searches aren't logged until you clear one. <strong>Clear log</strong> on a business's Rank tab deletes its entries.</li>
-        <li><strong>Last Grid scan (Pro, only if you run one):</strong> for each business, its last scan, so its Rank tab shows it again and a scan still running when you closed the page picks up again. It holds the scan's ID, your keyword, the grid size and area, when it started and whether it finished, and for each grid point its map position, the business's position there (or "not in the top 20") and the up to 20 businesses Google Maps showed there (their public name, rating, review count, map position and Google IDs). Only what MapGauge's server sent back. At most 20 businesses; the oldest scan goes first, and a new scan of the same business replaces its last one.</li>
-        <li><strong>Grid scan setup (Pro):</strong> the grid size, area and km/mi you chose last, so your next scan starts from them. One setting for all businesses; nothing about the business.</li>
+        <li><strong>Sign-in (only if you sign in):</strong> your session token, the email address you signed in with, and the server's last answer about your account (Free or Pro, points left or whether your free scan is used, number of devices, and where your Pro comes from), so the report and the popup can show them. Signing out, or the server saying the session has ended, deletes them.</li>
+        <li><strong>Device ID:</strong> a random ID the extension makes once, the first time you ask for a sign-in code. It holds nothing about you or your device. It stays after you sign out, so the same browser counts as the same device; it is sent to the server only when you sign in (see below).</li>
+        <li><strong>Last Grid scan (only if you run one):</strong> for each business, its last scan, so its Rank tab shows it again and a scan still running when you closed the page picks up again. It holds the scan's ID, your keyword, the grid size and area, when it started and whether it finished, and for each grid point its map position, the business's position there (or "not in the top 20") and the up to 20 businesses Google Maps showed there (their public name, rating, review count, map position and Google IDs). Only what MapGauge's server sent back. Each scan is tagged with a SHA-256 hash of the account's email address (a fingerprint, not the address), so it is shown only to the account that ran it, never to another account or while signed out. At most 20 businesses; the oldest scan goes first, and a new scan of the same business replaces its last one.</li>
+        <li><strong>Grid scan setup:</strong> the grid size, area and km/mi you chose last, so your next scan starts from them. One setting for all businesses; nothing about the business.</li>
+        <li><strong>Theme:</strong> your choice of System, Light or Dark for MapGauge's pages.</li>
         <li><strong>Compares used today:</strong> the date and how many compares you used on it (Free includes 3 a day). This count stays on your computer.</li>
-        <li><strong>Pro licence (only if you activate Pro):</strong> your licence key (also sent with each Grid scan request, see below), whether Gumroad said it is active (or why not, for example "refunded"), and when it was last checked. Removing the key on MapGauge's Pro licence page deletes it.</li>
+        <li><strong>Pro licence (only if you paste a key on MapGauge's Pro page):</strong> your licence key, whether Gumroad said it is active (or why not, for example "refunded"), and when it was last checked. Removing the key on MapGauge's Pro licence page deletes it.</li>
         <li><strong>PDF branding (Pro, only if you set it):</strong> the logo picture, company name and contact line you enter on MapGauge's Pro page, to print them at the top of your PDF reports. They are never sent anywhere; <strong>Clear all</strong> on that page deletes them.</li>
         <li><strong>First-time tip:</strong> whether you closed the "Your score is ready" tip on Google Maps, so it isn't shown again.</li>
         <li><strong>Audit profile bar:</strong> whether you collapsed MapGauge's bar at the bottom of the business panel on Google Maps to its small score, so it stays that way.</li>
         <li><strong>Self-check:</strong> for the last 100 search results and the last 100 businesses you opened on Google Maps, only which details MapGauge could read (for example "website: read, phone: read"), and the time the last one was seen. Never a business's name, its ID or your search, so it can't tell which businesses you saw. MapGauge's self-check page uses it to show whether MapGauge still reads Google Maps correctly. It is kept in <code>chrome.storage.session</code>, in memory only, and deleted when Chrome closes or when you click <strong>Clear and start again</strong> on that page.</li>
-        <li><strong>Where:</strong> in <code>chrome.storage.local</code>, the extension's own storage on your computer (the self-check in <code>chrome.storage.session</code>, as above). It isn't synced to your Google account or sent anywhere.</li>
+        <li><strong>Where:</strong> in <code>chrome.storage.local</code>, the extension's own storage on your computer (the self-check in <code>chrome.storage.session</code>, as above). It isn't synced to your Google account or sent anywhere, except what the requests below send.</li>
         <li><strong>How many:</strong> at most 50 reports. Auditing the same business again replaces its old report, and the oldest report is removed when a new one would go past 50.</li>
       </ul>
-      <p><strong>How to delete them:</strong> remove the extension. Open <code>chrome://extensions</code>, find MapGauge and click <strong>Remove</strong> (or right-click the MapGauge icon in the toolbar and choose <strong>Remove from Chrome</strong>). Chrome then deletes all of MapGauge's saved data. If you install it again, it starts empty. A business's Rank log can also be deleted on its own with <strong>Clear log</strong> on its Rank tab.</p>
+      <p><strong>How to delete them:</strong> remove the extension. Open <code>chrome://extensions</code>, find MapGauge and click <strong>Remove</strong> (or right-click the MapGauge icon in the toolbar and choose <strong>Remove from Chrome</strong>). Chrome then deletes all of MapGauge's saved data in your browser. If you install it again, it starts empty. A business's Rank log can also be deleted on its own with <strong>Clear log</strong> on its Rank tab. What MapGauge's server keeps is deleted as described in <a href="#account">Your account and MapGauge's server</a>.</p>
     </section>
 
     <section class="card" id="permissions">
@@ -81,75 +84,101 @@
         <table>
           <thead><tr><th scope="col">Permission</th><th scope="col">Why MapGauge needs it</th></tr></thead>
           <tbody>
-            <tr><td><code>storage</code></td><td>To save your audit reports, the Rank log, your last Grid scans, and how many compares you used today, on your own computer.</td></tr>
+            <tr><td><code>storage</code></td><td>To save your audit reports, the Rank log, your last Grid scans, your sign-in, your settings and how many compares you used today, on your own computer.</td></tr>
             <tr><td>Content script on <code>https://www.google.com/maps</code>, <code>https://www.google.com/maps/*</code> and <code>https://www.google.com/maps?*</code></td><td>To read the Maps data described above and show badges and the Audit profile button.</td></tr>
             <tr><td>Content script on <code>https://www.google.com/search*</code></td><td>To read the businesses of the map box on Google Search results, described above, and show badges on them. It runs on Google Maps and Google Search results only, on no other site.</td></tr>
-            <tr><td><code>https://api.gumroad.com/*</code>, <strong>optional</strong></td><td>Only for Pro: to check your licence key with Gumroad. Chrome asks for it when you click <strong>Activate</strong>, never before, and MapGauge gives it back when you remove your key. Free users never grant it.</td></tr>
+            <tr><td><code>https://api.gumroad.com/*</code>, <strong>optional</strong></td><td>Only for a Pro licence key pasted on MapGauge's Pro page: to check the key with Gumroad. Chrome asks for it when you click <strong>Activate</strong> there, never before, and MapGauge gives it back when you remove your key. Without a key it is never asked for; Restore Pro in the account window doesn't need it (MapGauge's server asks Gumroad instead).</td></tr>
           </tbody>
         </table>
       </div>
-      <p>MapGauge asks for nothing else: no access to all websites, your tabs list, your browsing history, cookies or downloads. Grid scan's requests to MapGauge's own server need no permission: that server answers only the MapGauge extension.</p>
+      <p>MapGauge asks for nothing else: no access to all websites, your tabs list, your browsing history, cookies or downloads. The requests to MapGauge's own server need no permission: that server answers only the MapGauge extension.</p>
     </section>
 
     <section class="card" id="requests">
       <h2>Every network request MapGauge makes</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th scope="col">Plan</th><th scope="col">Requests</th></tr></thead>
+          <thead><tr><th scope="col">When</th><th scope="col">Requests</th></tr></thead>
           <tbody>
-            <tr><td>Free</td><td><strong>None.</strong> All code, icons and data ship inside the extension. Nothing is downloaded or uploaded.</td></tr>
-            <tr><td>Pro: licence check</td><td><code>POST https://api.gumroad.com/v2/licenses/verify</code>, which sends Gumroad your licence key and MapGauge's Pro product ID, nothing else (no reports, no businesses, no browsing data). It is sent when you click <strong>Activate</strong> or <strong>Check now</strong>, and at most once a day while you use MapGauge (when Chrome starts or when you click Audit profile), so a cancelled or refunded licence stops unlocking Pro. Gumroad answers whether the licence is active; its privacy policy applies to the request.</td></tr>
-            <tr><td>Pro: Grid scan</td><td>Requests to MapGauge's own server at <code>https://api.mapgauge.workers.dev</code>, only from a report page with Pro activated. Each one (except the map's) carries your licence key, so the server can check that it unlocks Pro and count your points. What they send and what the server keeps are in <a href="#grid-scan">Grid scan and MapGauge's server</a> below.</td></tr>
+            <tr><td>No account, no licence key</td><td><strong>None.</strong> All code, icons and data ship inside the extension. Nothing is downloaded or uploaded.</td></tr>
+            <tr><td>Signed in</td><td>Requests to MapGauge's own server at <code>https://api.mapgauge.workers.dev</code>: to sign in, to show your account, for Grid scan and its history, and for Restore Pro. What each one sends and what the server keeps are in <a href="#account">Your account and MapGauge's server</a> below.</td></tr>
+            <tr><td>Pro licence key on MapGauge's Pro page</td><td><code>POST https://api.gumroad.com/v2/licenses/verify</code>, which sends Gumroad your licence key and MapGauge's Pro product ID, nothing else (no reports, no businesses, no browsing data). It is sent when you click <strong>Activate</strong> or <strong>Check now</strong>, and at most once a day while you use MapGauge (when Chrome starts or when you click Audit profile), so a cancelled or refunded licence stops unlocking Pro. Gumroad answers whether the licence is active; its privacy policy applies to the request.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="muted">Five things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps", "Open on Google Maps" and "Audit on Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), the "Join early access" and "Get Pro" buttons on locked Pro cards open Gumroad's page in a new tab only when you click them (Gumroad's privacy policy applies there; MapGauge sends Gumroad nothing), the "OpenStreetMap" and "Protomaps" credit links under the Grid scan map open those sites only when you click them, the "Report a problem" button on the self-check page opens your own email app with a message to MapGauge filled in (MapGauge's version and which details weren't read, no business names, searches or links), which is sent only if you send it yourself, and Chrome itself checks the Chrome Web Store for extension updates.</p>
+      <p class="muted">Five things that are not MapGauge requests, listed so the picture is complete: the "Open Google Maps", "Open on Google Maps" and "Audit on Maps" links open a normal Google Maps tab only when you click them (Google's own privacy policy applies there), the "Join early access" and "Get Pro" buttons open Gumroad's page in a new tab only when you click them (Gumroad's privacy policy applies there; MapGauge sends Gumroad nothing), the "OpenStreetMap" and "Protomaps" credit links under the Grid scan map open those sites only when you click them, the "Report a problem" button on the self-check page opens your own email app with a message to MapGauge filled in (MapGauge's version and which details weren't read, no business names, searches or links), which is sent only if you send it yourself, and Chrome itself checks the Chrome Web Store for extension updates.</p>
     </section>
 
-    <section class="card" id="grid-scan">
-      <h2>Grid scan and MapGauge's server (Pro)</h2>
-      <p>Grid scan checks where a business ranks on Google Maps across a grid of points around it (5&times;5 or 7&times;7). The searches can't run in your browser, so MapGauge's own server runs them for you through <strong>DataForSEO</strong>, a search data provider. The server runs on <strong>Cloudflare</strong> Workers at <code>https://api.mapgauge.workers.dev</code>: Cloudflare is the hosting provider that receives and processes these requests for MapGauge, and stores the server's data listed below (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>). Free never contacts it, and Pro contacts it only for the requests below.</p>
+    <section class="card" id="account">
+      <h2>Your account and MapGauge's server</h2>
+      <p id="grid-scan">Grid scan checks where a business ranks on Google Maps across a grid of points around it (5&times;5 or 7&times;7). The searches can't run in your browser, so MapGauge's own server runs them for you through <strong>DataForSEO</strong>, a search data provider. Grid scan needs an account: a Free account gets one 5&times;5 scan, and Pro gets a monthly number of points (one point is one grid search). The server runs on <strong>Cloudflare</strong> Workers at <code>https://api.mapgauge.workers.dev</code>: Cloudflare is the hosting provider that receives and processes these requests for MapGauge, and stores the server's data listed below (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>).</p>
+
+      <h3>Your email address</h3>
+      <p>MapGauge collects your email address only to sign you in and to match a Pro purchase to your account. You sign in with a 6-digit code, sent to your address through <strong>Resend</strong>, MapGauge's email provider (<a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend's privacy policy</a>). A code works once, for 10 minutes. The server keeps your address as you typed it and in a normalised form (lower case, without a "+" tag, and for Gmail without dots), so one mailbox is one account. MapGauge sends you no other email. MapGauge's owner gets an email (also through Resend) with your address when your account is first verified, and if an account is used on more than 5 devices in 30 days, so shared accounts can be spotted; nothing is blocked.</p>
+
       <h3>What the extension sends</h3>
       <div class="table-wrap">
         <table>
           <thead><tr><th scope="col">Request</th><th scope="col">When</th><th scope="col">What it sends</th></tr></thead>
           <tbody>
-            <tr><td><code>GET /v1/quota</code></td><td>When you open a report with Pro activated</td><td>Your licence key. The answer is how many points you used this month and your limit.</td></tr>
-            <tr><td><code>POST /v1/scans</code></td><td>When you click <strong>Start scan</strong></td><td>Your licence key, the keyword you typed, the business's map position, the grid size and area width, the business's country (if MapGauge read it), and the business's Google IDs (place ID and CID), so the server can find it in the results. No other business details, no report, no browsing data.</td></tr>
-            <tr><td><code>POST /v1/scans/&hellip;/run</code></td><td>While the scan runs</td><td>Your licence key, the scan's ID and the grid positions (row and column) of up to 5 points.</td></tr>
-            <tr><td><code>GET /v1/scans/&hellip;</code></td><td>When a scan that was running is picked up again after you reopen the page, and to read a scan's final results</td><td>Your licence key and the scan's ID.</td></tr>
-            <tr><td><code>GET /v1/tiles/basemap.pmtiles</code></td><td>When the Grid scan map is shown on the Rank tab</td><td>Requests for parts of the map file (OpenStreetMap data from Protomaps). No licence key. The parts asked for show which area the map shows.</td></tr>
+            <tr><td><code>POST /v1/auth/request-code</code>, <code>POST /v1/auth/verify-code</code></td><td>When you sign in</td><td>Your email address, the code you type (second request only) and the device ID. The answer is a session token (a random password for this browser, valid 30 days).</td></tr>
+            <tr><td><code>GET /v1/auth/me</code></td><td>When you open a report or the popup while signed in, and after a scan</td><td>Your session token. The answer is your plan, points left or whether your free scan is used, and your number of devices.</td></tr>
+            <tr><td><code>POST /v1/auth/sign-out</code></td><td>When you sign out</td><td>Your session token, which the server then ends.</td></tr>
+            <tr><td><code>POST /v1/scans</code></td><td>When you click <strong>Start scan</strong></td><td>Your session token, the keyword you typed, the business's map position, the grid size and area width, the business's country (if MapGauge read it), and the business's Google IDs (place ID and CID), so the server can find it in the results. No other business details, no report, no browsing data.</td></tr>
+            <tr><td><code>POST /v1/scans/&hellip;/run</code></td><td>While the scan runs</td><td>Your session token, the scan's ID and the grid positions (row and column) of up to 5 points.</td></tr>
+            <tr><td><code>GET /v1/scans/&hellip;</code>, <code>&hellip;/previous</code>, <code>&hellip;/summaries</code></td><td>To show a scan's results again, and to compare it with your earlier scans of the same settings</td><td>Your session token and the scan's ID.</td></tr>
+            <tr><td><code>POST /v1/scans/&hellip;/baseline</code></td><td>When you click <strong>Set as baseline</strong> (Pro)</td><td>Your session token and the scan's ID.</td></tr>
+            <tr><td><code>GET</code> and <code>POST /v1/scans/&hellip;/notes</code>, <code>DELETE /v1/notes/&hellip;</code></td><td>When you open the trend chart, save a note or delete one (Pro)</td><td>Your session token, the scan's ID, and for a new note its date and text (up to 200 characters).</td></tr>
+            <tr><td><code>POST /v1/account/restore</code></td><td>When you click <strong>Look up my purchase</strong> in Restore Pro</td><td>Your session token only. The server looks up the purchase by your account's own email address.</td></tr>
+            <tr><td><code>POST /v1/account/licence</code></td><td>When you click <strong>Activate with licence key</strong> in Restore Pro</td><td>Your session token and the licence key you typed.</td></tr>
+            <tr><td><code>GET /v1/tiles/basemap.pmtiles</code></td><td>When the Grid scan map is shown on the Rank tab</td><td>Requests for parts of the map file (OpenStreetMap data from Protomaps). No token. The parts asked for show which area the map shows.</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Like every website, the server sees your IP address with each request. It uses it only for per-minute request limits that protect the service from abuse; it doesn't write it to its database or its logs.</p>
+      <p>Like every website, the server sees your IP address with each request. It uses it for per-minute request limits that protect the service from abuse and doesn't write it to its database or its logs, with one exception: for the sign-in limits, it keeps a keyed hash of your IP address and of your email address (never the addresses themselves) for up to a day.</p>
+
       <h3>What the server sends on</h3>
       <ul>
-        <li><strong>To DataForSEO</strong>, once for each grid point: your keyword, the point's map position (with a zoom level), the search language (from the business's country), how many results to return (20), and a label made of the scan's ID and the point's grid position. Not your licence key, your IP address or which business you are checking. DataForSEO runs the Google Maps search and answers with the public results (<a href="https://dataforseo.com/privacy-policy" target="_blank" rel="noopener">DataForSEO's privacy policy</a>).</li>
-        <li><strong>To Gumroad</strong>, to check that your licence unlocks Pro: your licence key and MapGauge's Pro product ID, the same check the extension makes. The answer is reused for 10 minutes, so most requests don't reach Gumroad (<a href="https://gumroad.com/privacy" target="_blank" rel="noopener">Gumroad's privacy policy</a>).</li>
+        <li><strong>To DataForSEO</strong>, once for each grid point: your keyword, the point's map position (with a zoom level), the search language (from the business's country), how many results to return (20), and a label made of the scan's ID and the point's grid position. Not your email, your IP address or which business you are checking. DataForSEO runs the Google Maps search and answers with the public results (<a href="https://dataforseo.com/privacy-policy" target="_blank" rel="noopener">DataForSEO's privacy policy</a>).</li>
+        <li><strong>To Gumroad</strong>, where Pro is sold (<a href="https://gumroad.com/privacy" target="_blank" rel="noopener">Gumroad's privacy policy</a>): for <strong>Look up my purchase</strong>, your account's email address (as typed and normalised), to find a MapGauge Pro purchase made with it; for <strong>Activate with licence key</strong>, the key and MapGauge's Pro product ID. Either way, Pro is linked only when the purchase's email is your account's email. After that, the server checks the linked purchase with Gumroad by its sale ID about once a day, so a refund or an ended subscription is noticed.</li>
+        <li><strong>To Resend</strong>: your email address and your sign-in code, as above.</li>
       </ul>
+
+      <h3>What Gumroad tells MapGauge</h3>
+      <p>Gumroad notifies MapGauge's server when a purchase is refunded or a subscription is cancelled, ends or restarts. The server then asks Gumroad about that purchase and changes your Pro to match: a <strong>refund</strong> turns Pro off at once; a <strong>cancellation</strong> keeps Pro until the end of the period you paid for, then turns it off. The notification is matched to your account only by Gumroad's sale ID. It contains the buyer's email address, which MapGauge doesn't store or log.</p>
+
       <h3>What the server keeps, and for how long</h3>
       <ul>
-        <li><strong>Your licence key:</strong> never stored. The server keeps only a SHA-256 hash of it (a fingerprint that can't be turned back into the key) to link your scans and points to your licence.</li>
-        <li><strong>The licence check's answer:</strong> whether the licence unlocks Pro (or why not) and when it was checked, under the key's hash. Deleted 30 days after the licence was last used.</li>
-        <li><strong>Scan details, 24 hours:</strong> the scan's settings (keyword, map position, grid size, area, country, the business's Google IDs) and each point's position, result state, the business's position there and the up to 20 results DataForSEO returned. The 24 hours let a page that was closed mid-scan pick it up again, and a repeat of the same scan within 24 hours shows the saved answer without using points. An hourly clean-up deletes them after 24 hours.</li>
-        <li><strong>After 24 hours</strong>, a scan keeps only its ID, the key's hash, its number of points, its cost and its date, for the hourly scan limit and the cost history. Kept 13 months.</li>
-        <li><strong>Points used:</strong> how many points each licence (by its hash) used in each month, for the monthly quota. Kept 13 months.</li>
-        <li><strong>Daily cost:</strong> the total DataForSEO cost of each day, with no licence or scan attached, for the daily spending limit. Kept 13 months.</li>
-        <li><strong>Logs:</strong> the server's log lines hold only the request's type, its answer code, how long it took, the scan's ID, its number of points and cost, and the first 8 characters of the key's hash, never your licence key, IP address, keyword or map positions. Cloudflare keeps them for at most 7 days. Cloudflare's own per-request logs, which would hold request headers and IP addresses, are turned off.</li>
+        <li><strong>Your account:</strong> your email address (as typed and normalised) and when it was verified. Kept until you ask MapGauge to delete it (see <a href="#delete">Deleting your account</a>).</li>
+        <li><strong>Sign-in codes:</strong> a keyed hash of the code (never the code itself) with your email address, deleted by the hourly clean-up once the code has expired (10 minutes).</li>
+        <li><strong>Sessions:</strong> a SHA-256 hash of the session token (never the token itself) and the device ID. Deleted after 30 days, or ended at once when you sign out.</li>
+        <li><strong>Devices:</strong> each device ID used with your account and when it was first and last seen, to count your active devices (seen in the last 30 days) and to give one free scan per device. Kept with your account.</li>
+        <li><strong>Pro:</strong> for a linked purchase, a SHA-256 hash of its licence key (never the key itself), Gumroad's sale ID, whether it is active (or why not), its points period and when it was last checked. Kept with your account.</li>
+        <li><strong>Points and the free scan:</strong> the points each scan charged and refunded (failed spots give their points back), and which account, device ID and business (Google CID) used the free scan. Kept with your account.</li>
+        <li><strong>Grid scan results, 90 days:</strong> each point's position, result state, the business's position there and the up to 20 results DataForSEO returned. Your earlier scans can be shown again and compared during that time; a repeat of the same scan within 24 hours shows the saved answer without using points.</li>
+        <li><strong>Grid scan settings, 12 months:</strong> the keyword, map position, grid size, area, country and the business's Google IDs, then removed; after that a scan keeps only its ID, your account, its number of points, its cost and its date, for 13 months.</li>
+        <li><strong>Scan summaries, 12 months:</strong> each finished scan's three numbers (Top 3 share, average rank where found, area average), for the comparisons and the trend chart.</li>
+        <li><strong>Scan presets:</strong> the business (Google CID), keyword, grid size, area and centre that group your scans of the same settings, and which scan is the baseline. Deleted 12 months after its last scan.</li>
+        <li><strong>My notes (Pro):</strong> each note's date and text, under its preset. Deleted when you delete the note or when its preset is deleted.</li>
+        <li><strong>Daily cost:</strong> the total DataForSEO cost of each day, with no account or scan attached, for the daily spending limit. Kept 13 months.</li>
+        <li><strong>Logs:</strong> the server's log lines hold only the request's type, its answer code, how long it took, a short reason, the scan's ID, its number of points and cost, DataForSEO's status codes, the first 8 characters of the account's internal ID or the key's hash, and for Gumroad the sale or subscription ID and, when a lookup fails, its answer's field names; never your email address, a code, a token, a licence key, your IP address, your keyword or map positions. Cloudflare keeps them for at most 7 days. Cloudflare's own per-request logs, which would hold request headers and IP addresses, are turned off.</li>
       </ul>
-      <p>Your browser keeps its own copy of each business's last scan (see <a href="#stores">What MapGauge stores</a>). Nobody else can see your scans: each request needs your licence key.</p>
     </section>
 
     <section class="card" id="sharing">
       <h2>Sharing and selling</h2>
-      <p>MapGauge collects no personal data, and nothing is sold. Your reports, the Rank log and your saved scans stay on your computer, and nobody, including us, can see them. With Grid scan, the server shares only what is listed above with DataForSEO (to run the searches) and Gumroad (to check your licence), and runs on Cloudflare, which processes the requests for MapGauge, and keeps what is listed above for the times given.</p>
+      <p>Nothing is sold. MapGauge collects your email address only if you make an account, and uses it only to sign you in and to match a Pro purchase. Your audits, saved reports and the Rank log stay in your browser only, and nobody, including us, can see them. The server shares only what is listed above with DataForSEO (to run the searches), Gumroad (to find and check your Pro purchase) and Resend (to send your sign-in code), and runs on Cloudflare, which processes the requests for MapGauge.</p>
     </section>
 
     <section class="card" id="pro">
       <h2>The Pro plan</h2>
       <p>Payments go through <strong>Gumroad</strong> only, and MapGauge never sees your card details. Pro buttons in the extension open Gumroad's page in a new tab only when you click them; anything you enter there, such as your email, goes to Gumroad under Gumroad's privacy policy.</p>
-      <p>To unlock Pro you paste the licence key from your Gumroad email on MapGauge's Pro licence page and click <strong>Activate</strong>. Only then does Chrome ask your permission for MapGauge to contact <code>api.gumroad.com</code>, and the only request is the licence check listed above. Most Pro features use the same Google data described above (all categories, all loaded search results, category gap names, unlimited compares, lead filters); they read nothing more from Google. Grid scan is the one Pro feature that uses a server, as described in <a href="#grid-scan">Grid scan and MapGauge's server</a>; it includes a monthly number of points (one point is one grid search). The Free plan sends nothing to any server and keeps working without an account.</p>
+      <p>Signing in doesn't turn Pro on by itself. To unlock Pro on your account, open <strong>Restore Pro</strong> in the account window: <strong>Look up my purchase</strong> finds it by your account's email, or <strong>Activate with licence key</strong> uses the key from your Gumroad email. Either way the purchase's email must be your account's email. A licence key pasted on MapGauge's Pro licence page still unlocks the Pro features that run in your browser, with the check listed above; Grid scan always uses your account. Most Pro features use the same Google data described above (all categories, all loaded search results, category gap names, unlimited compares, lead filters); they read nothing more from Google.</p>
+    </section>
+
+    <section class="card" id="delete">
+      <h2>Deleting your account</h2>
+      <p>To delete your account and everything the server keeps under it, email the address below from your account's email address. Signing out ends the session in your browser; removing the extension deletes everything MapGauge keeps in your browser.</p>
     </section>
 
     <section class="card" id="contact">
@@ -166,6 +195,7 @@
       <a href="./">Home</a>
       <a href="pricing.html">Pricing</a>
       <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
       <a href="https://chromewebstore.google.com/detail/imhdnnjecgkalcekgkhhnkkhgpeopabd">Chrome Web Store</a>
       <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a>
     </nav>

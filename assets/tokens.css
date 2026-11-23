@@ -29,7 +29,7 @@
   /* Type: system fonts only (no remote fonts inside the extension) */
   --mg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mg-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --mg-text-xs: 11px; --mg-text-sm: 12px; --mg-text-md: 14px; --mg-text-lg: 16px; --mg-text-xl: 20px; --mg-text-2xl: 28px;
+  --mg-text-xs: 11px; --mg-text-sm: 12px; --mg-text-note: 12.5px; --mg-text-md: 14px; --mg-text-lg: 16px; --mg-text-xl: 20px; --mg-text-2xl: 28px;
 
   /* Space, radius, shadow */
   --mg-s1: 4px; --mg-s2: 8px; --mg-s3: 12px; --mg-s4: 16px; --mg-s5: 24px; --mg-s6: 32px;
